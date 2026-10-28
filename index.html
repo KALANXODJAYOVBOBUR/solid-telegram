@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHEVROLET AUTO | Avtomobil savdosi</title>
+  <link rel="stylesheet" href="./dima.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TELEFON RAQAMI BILAN KIRISH -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="brand-logo">C<span>✦</span></div>
+      <p class="eyebrow">CHEVROLET AUTO</p>
+      <h1>Xush kelibsiz!</h1>
+      <p class="muted">Avtomobillar olamiga kirish uchun telefon raqamingizni kiriting.</p>
+
+      <form id="loginForm">
+        <label for="phone">Telefon raqamingiz</label>
+        <div class="phone-field">
+          <span>🇺🇿 +998</span>
+          <input id="phone" type="tel" placeholder="90 123 45 67"
+                 maxlength="12" autocomplete="tel-national" required>
+        </div>
+        <p class="error" id="loginError"></p>
+        <button class="btn btn-primary full" type="submit">Saytga kirish →</button>
+      </form>
+      <p class="small-note">Demo sayt · Haqiqiy SMS yuborilmaydi</p>
+    </div>
+  </div>
+
+  <!-- ASOSIY SAYT -->
+  <div id="mainSite" class="hidden">
+    <header class="navbar">
+      <a href="#" class="logo">CHEVROLET<span>.</span></a>
+
+      <nav>
+        <a href="#home">Bosh sahifa</a>
+        <a href="#cars">Avtomobillar</a>
+        <a href="#about">Biz haqimizda</a>
+      </nav>
+
+      <button class="btn btn-outline" id="favoritesButton">
+        ♡ Saralangan <span id="favoriteCount">0</span>
+      </button>
+    </header>
+
+    <main>
+      <!-- BOSH SAHIFA -->
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <div class="hero-tag">✦ ISHONCHLI TANLOV · YANGI AVLOD</div>
+          <h1>Orzuingizdagi<br>mashina <span>shu yerda.</span></h1>
+          <p>Chevrolet avtomobillarini o‘rganing, taqqoslang va o‘zingizga mosini tanlang.</p>
+          <div class="hero-actions">
+            <a href="#cars" class="btn btn-primary">Mashinalarni ko‘rish ↗</a>
+            <span class="hero-note">Siz uchun qulay tanlov</span>
+          </div>
+          <div class="hero-stats">
+            <div><strong>08+</strong><span>Avtomobil modeli</span></div>
+            <div><strong>100%</strong><span>Qulay tanlov</span></div>
+            <div><strong>24/7</strong><span>Saytga kirish</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-circle"></div>
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=85"
+               alt="Sport avtomobil" class="hero-car">
+          <div class="floating-card">
+            <span>CHEVROLET</span>
+            <strong>Yangi imkoniyatlar.</strong>
+            <small>Tanlovingizni bugun boshlang</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- QIDIRUV -->
+      <section class="cars-section" id="cars">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">BIZNING AVTOPARK</p>
+            <h2>Chevrolet <span>avtomobillari</span></h2>
+            <p class="muted">O‘zingizga mos avtomobilni tanlang.</p>
+          </div>
+          <div class="search-box">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="Mashina qidirish...">
+          </div>
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="filter active" data-category="Barchasi">Barchasi</button>
+          <button class="filter" data-category="Sedan">Sedan</button>
+          <button class="filter" data-category="Krossover">Krossover</button>
+          <button class="filter" data-category="Oilaviy">Oilaviy</button>
+          <button class="filter" data-category="Sport">Sport</button>
+        </div>
+
+        <div class="results-line">
+          <span id="resultsCount">Avtomobillar</span>
+          <span>O‘zingizga mosini tanlang ↘</span>
+        </div>
+
+        <div class="car-grid" id="carGrid"></div>
+      </section>
+
+      <!-- AFZALLIKLAR -->
+      <section class="benefits" id="about">
+        <div class="benefit-intro">
+          <p class="eyebrow">NEGA BIZ?</p>
+          <h2>Avtomobil tanlash<br><span>oson bo‘lishi kerak.</span></h2>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">⌕</div>
+          <h3>Oson qidiruv</h3>
+          <p>Kerakli modelni bir necha soniyada toping.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">◇</div>
+          <h3>Batafsil ma’lumot</h3>
+          <p>Model, kuzov turi va narxni ko‘rib chiqing.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">↗</div>
+          <h3>Qulay buyurtma</h3>
+          <p>Tanlagan avtomobilingiz bo‘yicha so‘rov yuboring.</p>
+        </div>
+      </section>
+
+      <section class="cta">
+        <p class="eyebrow">KEYINGI SAFARINGIZNI BOSHLANG</p>
+        <h2>Qaysi Chevrolet sizga mos?</h2>
+        <p>Modellar bilan tanishing va o‘z tanlovingizni qiling.</p>
+        <a href="#cars" class="btn btn-light">Avtomobillarni ko‘rish ↗</a>
+      </section>
+    </main>
+
+    <footer>
+      <a href="#home" class="logo">CHEVROLET<span>.</span></a>
+      <p>© 2026 Chevrolet Auto. O‘quv loyihasi.</p>
+      <a href="#home">Yuqoriga ↑</a>
+    </footer>
+  </div>
+
+  <!-- MASHINA MA'LUMOTLARI OYNASI -->
+  <div class="modal hidden" id="detailModal">
+    <div class="modal-card detail-card">
+      <button class="close-button" data-close="detailModal">×</button>
+      <div id="detailContent"></div>
+    </div>
+  </div>
+
+  <!-- BUYURTMA OYNASI -->
+  <div class="modal hidden" id="orderModal">
+    <div class="modal-card">
+      <button class="close-button" data-close="orderModal">×</button>
+      <p class="eyebrow">BUYURTMA</p>
+      <h2>Biz siz bilan bog‘lanamiz</h2>
+      <p class="muted">Ma’lumotlaringizni kiriting.</p>
+      <form id="orderForm">
+        <label for="customerName">Ismingiz</label>
+        <input id="customerName" type="text" placeholder="Ismingizni yozing" required>
+        <label for="customerPhone">Telefon raqamingiz</label>
+        <input id="customerPhone" type="tel" placeholder="+998 90 123 45 67" required>
+        <input type="hidden" id="selectedCar">
+        <button class="btn btn-primary full" type="submit">Buyurtma yuborish ↗</button>
+      </form>
+      <p id="orderMessage" class="success-message"></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="./dima.js"></script>
+</body>
+</html>
